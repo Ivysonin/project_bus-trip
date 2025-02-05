@@ -5,11 +5,15 @@ from Companhia_Nunes.dados_cliente import *
 
 # Definindo cores usando sequência de escape ANSI
 cor_ciano = '\033[1;36m'
+cor_verde = '\033[1;32m'
 reset_cor = '\033[0m' # Resetar a cor para o padrão
 
 
 # Iniciando programa
 print(f'{cor_ciano}\n===== Bem-vindo(a) a Companhia Nunes =====\n{reset_cor}')
+print(f'{cor_verde}--- Requisitos ---{reset_cor}')
+print('1. Idade menor que 14 anos precisa de acompanhamento\n'
+      '2. Possuir 25$ para comprar passagem\n')
 
 print(f'{cor_ciano}Nossas Passagens disponíveis:\n{reset_cor}')
 print('1. Tamandaré')
