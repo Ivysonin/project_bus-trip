@@ -18,9 +18,9 @@ class Carteira_viagem:
     # Comprando a passagem
     def comprar_passagem(self) -> str:
         escolha = input(f'{cor_ciano}Deseja comprar a passagem? (S / N): {reset_cor}').upper()
-        if escolha == 'S':
+        if escolha == 'S' and self.dinheiro == 'sim':
             self.passagem = 'sim'
-        elif escolha == 'N':
+        elif escolha == 'N' and self.dinheiro == 'não':
             self.passagem = 'não'
         else:
             self.passagem = 'Não há informações'
@@ -29,7 +29,7 @@ class Carteira_viagem:
 
     # Exibindo as informações do cliente
     def panfletos_passagem(self):
-        if (self.idade > 14 and self.passagem == 'sim') or (self.idade < 14 and self.passagem == 'sim' and self.acompanhado == 'sim'):
+        if (self.idade > 14 and self.passagem == 'sim' and self.idade != 0) or (self.idade < 14 and self.passagem == 'sim' and self.acompanhado == 'sim' and self.idade != 0):
             print(f'{cor_verde}\n===== Aqui está seu cartão de viagem =====\n{reset_cor}')
             print(f'{cor_verde}| ==================================={reset_cor}')
             print(f'{cor_verde}|{reset_cor} Nome: {self.nome}') 
