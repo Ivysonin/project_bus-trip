@@ -1,3 +1,10 @@
+# Definindo cores usando sequência de escape ANSI
+cor_ciano = '\033[1;36m'
+cor_verde = '\033[1;32m'
+cor_vermelho = '\033[31m'
+reset_cor = '\033[0m' # Resetar a cor para o padrão
+
+
 class Carteira_viagem:
     def __init__(self, nome_cliente: str, idade_cliente: int, dinheiro_cliente: str, acompanhado_cliente: str, local_viagem: str):
         self.nome = nome_cliente
@@ -10,7 +17,7 @@ class Carteira_viagem:
 
     # Comprando a passagem
     def comprar_passagem(self) -> str:
-        escolha = input('Deseja comprar a passagem? (S / N): ').upper()
+        escolha = input(f'{cor_ciano}Deseja comprar a passagem? (S / N): {reset_cor}').upper()
         if escolha == 'S':
             self.passagem = 'sim'
         elif escolha == 'N':
@@ -23,17 +30,17 @@ class Carteira_viagem:
     # Exibindo as informações do cliente
     def panfletos_passagem(self):
         if (self.idade > 14 and self.passagem == 'sim') or (self.idade < 14 and self.passagem == 'sim' and self.acompanhado == 'sim'):
-            print('\n===== Aqui está seu cartão de viagem =====\n')
-            print(f'| ===================================')
-            print(f'| Nome: {self.nome}') 
-            print(f'| ===================================')
-            print(f'| Idade: {self.idade}')
-            print(f'| ===================================')
-            print(f'| Acompanhado: {self.acompanhado}')
-            print(f'| ===================================')
-            print(f'| Passagem: {self.passagem}')
-            print(f'| ===================================')
-            print(f'| Lugar: {self.local_viagem}')
-            print(f'| ===================================')
+            print(f'{cor_verde}\n===== Aqui está seu cartão de viagem =====\n{reset_cor}')
+            print(f'{cor_verde}| ==================================={reset_cor}')
+            print(f'{cor_verde}|{reset_cor} Nome: {self.nome}') 
+            print(f'{cor_verde}| ==================================={reset_cor}')
+            print(f'{cor_verde}|{reset_cor} Idade: {self.idade}')
+            print(f'{cor_verde}| ==================================={reset_cor}')
+            print(f'{cor_verde}|{reset_cor} Acompanhado: {self.acompanhado}')
+            print(f'{cor_verde}| ==================================={reset_cor}')
+            print(f'{cor_verde}|{reset_cor} Passagem: {self.passagem}')
+            print(f'{cor_verde}| ==================================={reset_cor}')
+            print(f'{cor_verde}|{reset_cor} Lugar: {self.local_viagem}')
+            print(f'{cor_verde}| ==================================={reset_cor}')
         else:
-            print('\n===== Infelizmente, você não pode viajar porque não está cumprindo os requisitos. =====\n')
+            print(f'{cor_vermelho}\n===== Infelizmente, você não pode viajar porque não está cumprindo os requisitos. ====={reset_cor}')
