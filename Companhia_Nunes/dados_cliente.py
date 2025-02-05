@@ -43,7 +43,7 @@ def idade_cliente() -> int:
 
 # Dinheiro do cliente (True or false)
 def dinheiro_cliente() -> str:
-    dinheiro = input(f'{cor_ciano}Tem 25$ ou mais? (S / N): {reset_cor}').upper()
+    dinheiro = input(f'{cor_ciano}Você tem 25$ ? (S / N): {reset_cor}').upper()
     if dinheiro == 'S':
         dinheiro = 'sim'
     elif dinheiro == 'N':
