@@ -21,8 +21,8 @@ local_viagem = local_viagem_cliente()
 print('\n--- Informe seus dados ---\n')
 nome = nome_cliente()
 idade = idade_cliente()
-dinheiro = dinheiro_cliente()
 acompanhado = acompanhado_cliente()
+dinheiro = dinheiro_cliente()
 
 cliente = Carteira_viagem(nome, idade, dinheiro, acompanhado, local_viagem)
 
