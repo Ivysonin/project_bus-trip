@@ -17,7 +17,7 @@ class Carteira_viagem:
 
     # Comprando a passagem
     def comprar_passagem(self) -> str:
-        escolha = input(f'{cor_ciano}Deseja comprar a passagem? (S / N): {reset_cor}').upper()
+        escolha = input(f'\n{cor_ciano}Confirma a compra da passagem? (S / N): {reset_cor}').upper()
         if escolha == 'S' and self.dinheiro == 'sim':
             self.passagem = 'sim'
         elif escolha == 'N' and self.dinheiro == 'não':
