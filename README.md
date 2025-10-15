@@ -13,3 +13,7 @@ Pensei então em criar a lógica de um site, onde os clientes pudessem se cadast
 
 ## 📷 Imagem caso não siga instruções
 ![erro](https://github.com/user-attachments/assets/2dad88a0-5c3e-4f27-a12d-a372d6b91973)
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE), com cláusula adicional de atribuição.
