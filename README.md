@@ -16,4 +16,4 @@ Pensei então em criar a lógica de um site, onde os clientes pudessem se cadast
 
 ## 📄 Licença
 
-Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE), com cláusula adicional de atribuição.
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE).
